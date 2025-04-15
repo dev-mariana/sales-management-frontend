@@ -20,14 +20,22 @@
         <div class="row q-col-gutter-md">
           <div class="text-h6 col-12">
             Gerenciar Produtos
-            <q-btn color="green" label="Registrar Novo Produto" class="float-right" icon="add" />
-          </div>
-
-          <!-- <div class="col-12 col-md-6">
-            <ProductForm />
+            <q-btn
+              @click="showForm = true"
+              color="green"
+              label="Registrar Novo Produto"
+              class="float-right"
+              icon="add"
+            />
           </div>
 
           <div class="col-12 col-md-6">
+            <q-dialog v-model="showForm">
+              <ProductForm />
+            </q-dialog>
+          </div>
+
+          <!-- <div class="col-12 col-md-6">
             <ProductDetails :product="selectedProduct" />
           </div> -->
 
@@ -49,15 +57,17 @@ body {
 
 <script setup lang="ts">
 import { ref } from 'vue'
-// import ProductForm from './components/ProductForm.vue'
+import ProductForm from './components/ProductForm.vue'
 // import ProductDetails from './components/ProductDetails.vue'
 import ProductList from './pages/ProductList.vue'
 
-const selectedProduct = ref({
-  id: '12345',
-  name: 'Wireless Headphones',
-  size: 'Electronics',
-  price: 129.99,
-  stock: 45,
-})
+const showForm = ref(false)
+
+// const selectedProduct = ref({
+//   id: '12345',
+//   name: 'Wireless Headphones',
+//   size: 'Electronics',
+//   price: 129.99,
+//   stock: 45,
+// })
 </script>

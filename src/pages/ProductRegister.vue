@@ -71,6 +71,11 @@ const onSubmit = () => {
   }
 }
 
+// align form to center
+// align title
+// choose the colors
+// do css for this page
+
 const onReset = () => {
   name.value = null
   size.value = null

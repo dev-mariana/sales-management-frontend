@@ -1,1 +1,14 @@
-// app global css in SCSS form
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+body {
+  background: $dark-page;
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    0 10px,
+    10px -10px,
+    -10px 0px;
+}
